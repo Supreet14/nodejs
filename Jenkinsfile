@@ -1,11 +1,10 @@
-pipeline {
-    agent any
-  stages {
-        stage('Build') {
-            agent {
-              docker { image 'nodejs:1'}
-                }
-            }
-}
-}
-
+pipeline {  
+    agent any  
+    stages {  
+            stage ('Build') {  
+                steps {  
+                        echo 'Running build phase...'  
+                }  
+            }  
+    }  
+}  
