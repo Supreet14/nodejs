@@ -12,8 +12,11 @@ stages {
         steps {
             echo 'Testing..'
             script {
-                docker.image('selenium/standalone-firefox:3.141.59-gold')
-                      .inside('-p 4444:4444'){}
+                script {
+                docker.withRegistry('','dockerHub') {
+                    docker.image('selenium/standalone-firefox:3.141.59-gold')
+                }
+            }
             }
            // sh 'npm test'
         }
