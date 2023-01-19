@@ -1,0 +1,358 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   '/home/ec2-user/.nvm/versions/node/v12.22.12/bin/node',
+1 verbose cli   '/home/ec2-user/.nvm/versions/node/v12.22.12/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'express'
+1 verbose cli ]
+2 info using npm@6.14.16
+3 info using node@v12.22.12
+4 verbose npm-session adb292684f6a50da
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 http fetch GET 200 https://registry.npmjs.org/express 21ms (from cache)
+8 silly pacote tag manifest for express@latest fetched in 38ms
+9 timing stage:loadCurrentTree Completed in 58ms
+10 silly install loadIdealTree
+11 silly install cloneCurrentTreeToIdealTree
+12 timing stage:loadIdealTree:cloneCurrentTree Completed in 0ms
+13 silly install loadShrinkwrap
+14 timing stage:loadIdealTree:loadShrinkwrap Completed in 1ms
+15 silly install loadAllDepsIntoIdealTree
+16 silly resolveWithNewModule express@4.18.2 checking installable status
+17 http fetch GET 200 https://registry.npmjs.org/accepts 114ms (from cache)
+18 http fetch GET 200 https://registry.npmjs.org/array-flatten 114ms (from cache)
+19 http fetch GET 200 https://registry.npmjs.org/content-disposition 105ms (from cache)
+20 http fetch GET 200 https://registry.npmjs.org/cookie 94ms (from cache)
+21 http fetch GET 200 https://registry.npmjs.org/depd 96ms (from cache)
+22 http fetch GET 200 https://registry.npmjs.org/encodeurl 97ms (from cache)
+23 silly pacote range manifest for accepts@~1.3.8 fetched in 125ms
+24 silly resolveWithNewModule accepts@1.3.8 checking installable status
+25 silly pacote version manifest for array-flatten@1.1.1 fetched in 126ms
+26 silly resolveWithNewModule array-flatten@1.1.1 checking installable status
+27 silly pacote version manifest for content-disposition@0.5.4 fetched in 118ms
+28 silly resolveWithNewModule content-disposition@0.5.4 checking installable status
+29 silly pacote version manifest for cookie@0.5.0 fetched in 107ms
+30 silly resolveWithNewModule cookie@0.5.0 checking installable status
+31 silly pacote version manifest for depd@2.0.0 fetched in 109ms
+32 silly resolveWithNewModule depd@2.0.0 checking installable status
+33 silly pacote range manifest for encodeurl@~1.0.2 fetched in 110ms
+34 silly resolveWithNewModule encodeurl@1.0.2 checking installable status
+35 http fetch GET 200 https://registry.npmjs.org/escape-html 24ms (from cache)
+36 http fetch GET 200 https://registry.npmjs.org/etag 24ms (from cache)
+37 http fetch GET 200 https://registry.npmjs.org/finalhandler 24ms (from cache)
+38 http fetch GET 200 https://registry.npmjs.org/fresh 24ms (from cache)
+39 http fetch GET 200 https://registry.npmjs.org/merge-descriptors 17ms (from cache)
+40 silly pacote range manifest for escape-html@~1.0.3 fetched in 30ms
+41 silly resolveWithNewModule escape-html@1.0.3 checking installable status
+42 silly pacote range manifest for etag@~1.8.1 fetched in 30ms
+43 silly resolveWithNewModule etag@1.8.1 checking installable status
+44 silly pacote version manifest for finalhandler@1.2.0 fetched in 30ms
+45 silly resolveWithNewModule finalhandler@1.2.0 checking installable status
+46 silly pacote version manifest for fresh@0.5.2 fetched in 30ms
+47 silly resolveWithNewModule fresh@0.5.2 checking installable status
+48 silly pacote version manifest for merge-descriptors@1.0.1 fetched in 25ms
+49 silly resolveWithNewModule merge-descriptors@1.0.1 checking installable status
+50 http fetch GET 200 https://registry.npmjs.org/parseurl 29ms (from cache)
+51 http fetch GET 200 https://registry.npmjs.org/proxy-addr 23ms (from cache)
+52 silly pacote range manifest for parseurl@~1.3.3 fetched in 41ms
+53 silly resolveWithNewModule parseurl@1.3.3 checking installable status
+54 silly pacote range manifest for proxy-addr@~2.0.7 fetched in 38ms
+55 silly resolveWithNewModule proxy-addr@2.0.7 checking installable status
+56 http fetch GET 304 https://registry.npmjs.org/content-type 236ms (from cache)
+57 http fetch GET 304 https://registry.npmjs.org/body-parser 245ms (from cache)
+58 http fetch GET 304 https://registry.npmjs.org/debug 228ms (from cache)
+59 silly pacote range manifest for content-type@~1.0.4 fetched in 248ms
+60 silly resolveWithNewModule content-type@1.0.4 checking installable status
+61 silly pacote version manifest for debug@2.6.9 fetched in 240ms
+62 silly resolveWithNewModule debug@2.6.9 checking installable status
+63 http fetch GET 304 https://registry.npmjs.org/methods 102ms (from cache)
+64 http fetch GET 304 https://registry.npmjs.org/http-errors 129ms (from cache)
+65 http fetch GET 304 https://registry.npmjs.org/path-to-regexp 106ms (from cache)
+66 silly pacote range manifest for methods@~1.1.2 fetched in 110ms
+67 silly resolveWithNewModule methods@1.1.2 checking installable status
+68 http fetch GET 304 https://registry.npmjs.org/on-finished 114ms (from cache)
+69 http fetch GET 200 https://registry.npmjs.org/body-parser/-/body-parser-1.20.1.tgz 31ms (from cache)
+70 silly pacote version manifest for path-to-regexp@0.1.7 fetched in 123ms
+71 silly resolveWithNewModule path-to-regexp@0.1.7 checking installable status
+72 silly pacote version manifest for http-errors@2.0.0 fetched in 151ms
+73 silly resolveWithNewModule http-errors@2.0.0 checking installable status
+74 silly pacote version manifest for on-finished@2.4.1 fetched in 142ms
+75 silly resolveWithNewModule on-finished@2.4.1 checking installable status
+76 http fetch GET 304 https://registry.npmjs.org/cookie-signature 291ms (from cache)
+77 http fetch GET 200 https://registry.npmjs.org/serve-static 44ms (from cache)
+78 silly pacote version manifest for cookie-signature@1.0.6 fetched in 300ms
+79 silly resolveWithNewModule cookie-signature@1.0.6 checking installable status
+80 silly pacote version manifest for serve-static@1.15.0 fetched in 51ms
+81 silly resolveWithNewModule serve-static@1.15.0 checking installable status
+82 http fetch GET 304 https://registry.npmjs.org/qs 124ms (from cache)
+83 http fetch GET 304 https://registry.npmjs.org/range-parser 120ms (from cache)
+84 silly pacote version manifest for body-parser@1.20.1 fetched in 333ms
+85 silly resolveWithNewModule body-parser@1.20.1 checking installable status
+86 silly pacote range manifest for range-parser@~1.2.1 fetched in 129ms
+87 silly resolveWithNewModule range-parser@1.2.1 checking installable status
+88 silly pacote version manifest for qs@6.11.0 fetched in 136ms
+89 silly resolveWithNewModule qs@6.11.0 checking installable status
+90 http fetch GET 200 https://registry.npmjs.org/utils-merge 19ms (from cache)
+91 silly pacote version manifest for utils-merge@1.0.1 fetched in 22ms
+92 silly resolveWithNewModule utils-merge@1.0.1 checking installable status
+93 http fetch GET 304 https://registry.npmjs.org/send 85ms (from cache)
+94 http fetch GET 304 https://registry.npmjs.org/safe-buffer 92ms (from cache)
+95 silly pacote version manifest for send@0.18.0 fetched in 91ms
+96 silly resolveWithNewModule send@0.18.0 checking installable status
+97 http fetch GET 200 https://registry.npmjs.org/safe-buffer/-/safe-buffer-5.2.1.tgz 17ms (from cache)
+98 http fetch GET 304 https://registry.npmjs.org/statuses 83ms (from cache)
+99 http fetch GET 304 https://registry.npmjs.org/type-is 70ms (from cache)
+100 silly pacote version manifest for statuses@2.0.1 fetched in 88ms
+101 silly resolveWithNewModule statuses@2.0.1 checking installable status
+102 silly pacote range manifest for type-is@~1.6.18 fetched in 78ms
+103 silly resolveWithNewModule type-is@1.6.18 checking installable status
+104 silly pacote version manifest for safe-buffer@5.2.1 fetched in 125ms
+105 silly resolveWithNewModule safe-buffer@5.2.1 checking installable status
+106 http fetch GET 304 https://registry.npmjs.org/setprototypeof 95ms (from cache)
+107 http fetch GET 304 https://registry.npmjs.org/vary 60ms (from cache)
+108 silly pacote version manifest for setprototypeof@1.2.0 fetched in 97ms
+109 silly resolveWithNewModule setprototypeof@1.2.0 checking installable status
+110 silly pacote range manifest for vary@~1.1.2 fetched in 62ms
+111 silly resolveWithNewModule vary@1.1.2 checking installable status
+112 http fetch GET 200 https://registry.npmjs.org/negotiator 3ms (from cache)
+113 silly pacote version manifest for negotiator@0.6.3 fetched in 5ms
+114 silly resolveWithNewModule negotiator@0.6.3 checking installable status
+115 http fetch GET 304 https://registry.npmjs.org/mime-types 32ms (from cache)
+116 silly pacote range manifest for mime-types@~2.1.34 fetched in 34ms
+117 silly resolveWithNewModule mime-types@2.1.35 checking installable status
+118 http fetch GET 304 https://registry.npmjs.org/mime-db 28ms (from cache)
+119 silly pacote version manifest for mime-db@1.52.0 fetched in 30ms
+120 silly resolveWithNewModule mime-db@1.52.0 checking installable status
+121 http fetch GET 304 https://registry.npmjs.org/destroy 39ms (from cache)
+122 silly pacote version manifest for destroy@1.2.0 fetched in 42ms
+123 silly resolveWithNewModule destroy@1.2.0 checking installable status
+124 http fetch GET 304 https://registry.npmjs.org/bytes 88ms (from cache)
+125 http fetch GET 304 https://registry.npmjs.org/iconv-lite 88ms (from cache)
+126 silly pacote version manifest for bytes@3.1.2 fetched in 91ms
+127 silly resolveWithNewModule bytes@3.1.2 checking installable status
+128 silly pacote version manifest for iconv-lite@0.4.24 fetched in 92ms
+129 silly resolveWithNewModule iconv-lite@0.4.24 checking installable status
+130 http fetch GET 304 https://registry.npmjs.org/raw-body 93ms (from cache)
+131 http fetch GET 304 https://registry.npmjs.org/unpipe 93ms (from cache)
+132 silly pacote version manifest for raw-body@2.5.1 fetched in 95ms
+133 silly resolveWithNewModule raw-body@2.5.1 checking installable status
+134 silly pacote version manifest for unpipe@1.0.0 fetched in 95ms
+135 silly resolveWithNewModule unpipe@1.0.0 checking installable status
+136 http fetch GET 304 https://registry.npmjs.org/ms 27ms (from cache)
+137 silly pacote version manifest for ms@2.0.0 fetched in 29ms
+138 silly resolveWithNewModule ms@2.0.0 checking installable status
+139 http fetch GET 304 https://registry.npmjs.org/inherits 29ms (from cache)
+140 http fetch GET 200 https://registry.npmjs.org/inherits/-/inherits-2.0.4.tgz 11ms (from cache)
+141 silly pacote version manifest for inherits@2.0.4 fetched in 46ms
+142 silly resolveWithNewModule inherits@2.0.4 checking installable status
+143 http fetch GET 304 https://registry.npmjs.org/toidentifier 47ms (from cache)
+144 silly pacote version manifest for toidentifier@1.0.1 fetched in 48ms
+145 silly resolveWithNewModule toidentifier@1.0.1 checking installable status
+146 http fetch GET 304 https://registry.npmjs.org/safer-buffer 569ms (from cache)
+147 silly pacote range manifest for safer-buffer@>= 2.1.2 < 3 fetched in 570ms
+148 silly resolveWithNewModule safer-buffer@2.1.2 checking installable status
+149 http fetch GET 304 https://registry.npmjs.org/ee-first 27ms (from cache)
+150 silly pacote version manifest for ee-first@1.1.1 fetched in 28ms
+151 silly resolveWithNewModule ee-first@1.1.1 checking installable status
+152 http fetch GET 304 https://registry.npmjs.org/side-channel 30ms (from cache)
+153 silly pacote range manifest for side-channel@^1.0.4 fetched in 32ms
+154 silly resolveWithNewModule side-channel@1.0.4 checking installable status
+155 http fetch GET 304 https://registry.npmjs.org/object-inspect 37ms (from cache)
+156 silly pacote range manifest for object-inspect@^1.9.0 fetched in 40ms
+157 silly resolveWithNewModule object-inspect@1.12.3 checking installable status
+158 http fetch GET 304 https://registry.npmjs.org/get-intrinsic 42ms (from cache)
+159 silly pacote range manifest for get-intrinsic@^1.0.2 fetched in 43ms
+160 silly resolveWithNewModule get-intrinsic@1.1.3 checking installable status
+161 http fetch GET 304 https://registry.npmjs.org/call-bind 49ms (from cache)
+162 silly pacote range manifest for call-bind@^1.0.0 fetched in 52ms
+163 silly resolveWithNewModule call-bind@1.0.2 checking installable status
+164 http fetch GET 304 https://registry.npmjs.org/function-bind 33ms (from cache)
+165 silly pacote range manifest for function-bind@^1.1.1 fetched in 35ms
+166 silly resolveWithNewModule function-bind@1.1.1 checking installable status
+167 http fetch GET 304 https://registry.npmjs.org/has-symbols 27ms (from cache)
+168 silly pacote range manifest for has-symbols@^1.0.3 fetched in 29ms
+169 silly resolveWithNewModule has-symbols@1.0.3 checking installable status
+170 http fetch GET 304 https://registry.npmjs.org/has 30ms (from cache)
+171 silly pacote range manifest for has@^1.0.3 fetched in 31ms
+172 silly resolveWithNewModule has@1.0.3 checking installable status
+173 http fetch GET 304 https://registry.npmjs.org/media-typer 36ms (from cache)
+174 silly pacote version manifest for media-typer@0.3.0 fetched in 40ms
+175 silly resolveWithNewModule media-typer@0.3.0 checking installable status
+176 http fetch GET 200 https://registry.npmjs.org/forwarded 4ms (from cache)
+177 http fetch GET 200 https://registry.npmjs.org/ipaddr.js 3ms (from cache)
+178 silly pacote version manifest for forwarded@0.2.0 fetched in 5ms
+179 silly resolveWithNewModule forwarded@0.2.0 checking installable status
+180 silly pacote version manifest for ipaddr.js@1.9.1 fetched in 5ms
+181 silly resolveWithNewModule ipaddr.js@1.9.1 checking installable status
+182 http fetch GET 200 https://registry.npmjs.org/mime 5ms (from cache)
+183 silly pacote version manifest for mime@1.6.0 fetched in 6ms
+184 silly resolveWithNewModule mime@1.6.0 checking installable status
+185 http fetch GET 200 https://registry.npmjs.org/ms/-/ms-2.1.3.tgz 6ms (from cache)
+186 silly pacote version manifest for ms@2.1.3 fetched in 10ms
+187 silly resolveWithNewModule ms@2.1.3 checking installable status
+188 timing stage:loadIdealTree:loadAllDepsIntoIdealTree Completed in 1519ms
+189 timing stage:loadIdealTree Completed in 1567ms
+190 silly currentTree nodejsdocker
+191 silly idealTree nodejsdocker
+191 silly idealTree ├── accepts@1.3.8
+191 silly idealTree ├── array-flatten@1.1.1
+191 silly idealTree ├── body-parser@1.20.1
+191 silly idealTree ├── bytes@3.1.2
+191 silly idealTree ├── call-bind@1.0.2
+191 silly idealTree ├── content-disposition@0.5.4
+191 silly idealTree ├── content-type@1.0.4
+191 silly idealTree ├── cookie-signature@1.0.6
+191 silly idealTree ├── cookie@0.5.0
+191 silly idealTree ├── debug@2.6.9
+191 silly idealTree ├── depd@2.0.0
+191 silly idealTree ├── destroy@1.2.0
+191 silly idealTree ├── ee-first@1.1.1
+191 silly idealTree ├── encodeurl@1.0.2
+191 silly idealTree ├── escape-html@1.0.3
+191 silly idealTree ├── etag@1.8.1
+191 silly idealTree ├── express@4.18.2
+191 silly idealTree ├── finalhandler@1.2.0
+191 silly idealTree ├── forwarded@0.2.0
+191 silly idealTree ├── fresh@0.5.2
+191 silly idealTree ├── function-bind@1.1.1
+191 silly idealTree ├── get-intrinsic@1.1.3
+191 silly idealTree ├── has-symbols@1.0.3
+191 silly idealTree ├── has@1.0.3
+191 silly idealTree ├── http-errors@2.0.0
+191 silly idealTree ├── iconv-lite@0.4.24
+191 silly idealTree ├── inherits@2.0.4
+191 silly idealTree ├── ipaddr.js@1.9.1
+191 silly idealTree ├── media-typer@0.3.0
+191 silly idealTree ├── merge-descriptors@1.0.1
+191 silly idealTree ├── methods@1.1.2
+191 silly idealTree ├── mime-db@1.52.0
+191 silly idealTree ├── mime-types@2.1.35
+191 silly idealTree ├── mime@1.6.0
+191 silly idealTree ├── ms@2.0.0
+191 silly idealTree ├── negotiator@0.6.3
+191 silly idealTree ├── object-inspect@1.12.3
+191 silly idealTree ├── on-finished@2.4.1
+191 silly idealTree ├── parseurl@1.3.3
+191 silly idealTree ├── path-to-regexp@0.1.7
+191 silly idealTree ├── proxy-addr@2.0.7
+191 silly idealTree ├── qs@6.11.0
+191 silly idealTree ├── range-parser@1.2.1
+191 silly idealTree ├── raw-body@2.5.1
+191 silly idealTree ├── safe-buffer@5.2.1
+191 silly idealTree ├── safer-buffer@2.1.2
+191 silly idealTree ├─┬ send@0.18.0
+191 silly idealTree │ └── ms@2.1.3
+191 silly idealTree ├── serve-static@1.15.0
+191 silly idealTree ├── setprototypeof@1.2.0
+191 silly idealTree ├── side-channel@1.0.4
+191 silly idealTree ├── statuses@2.0.1
+191 silly idealTree ├── toidentifier@1.0.1
+191 silly idealTree ├── type-is@1.6.18
+191 silly idealTree ├── unpipe@1.0.0
+191 silly idealTree ├── utils-merge@1.0.1
+191 silly idealTree └── vary@1.1.2
+192 silly install generateActionsToTake
+193 warn checkPermissions Missing write access to /home/ec2-user/nodejsdocker
+194 timing stage:rollbackFailedOptional Completed in 0ms
+195 timing stage:runTopLevelLifecycles Completed in 1640ms
+196 silly saveTree nodejsdocker
+196 silly saveTree └─┬ express@4.18.2
+196 silly saveTree   ├─┬ accepts@1.3.8
+196 silly saveTree   │ ├─┬ mime-types@2.1.35
+196 silly saveTree   │ │ └── mime-db@1.52.0
+196 silly saveTree   │ └── negotiator@0.6.3
+196 silly saveTree   ├── array-flatten@1.1.1
+196 silly saveTree   ├─┬ body-parser@1.20.1
+196 silly saveTree   │ ├── bytes@3.1.2
+196 silly saveTree   │ ├── content-type@1.0.4
+196 silly saveTree   │ ├─┬ debug@2.6.9
+196 silly saveTree   │ │ └── ms@2.0.0
+196 silly saveTree   │ ├── depd@2.0.0
+196 silly saveTree   │ ├── destroy@1.2.0
+196 silly saveTree   │ ├─┬ http-errors@2.0.0
+196 silly saveTree   │ │ ├── inherits@2.0.4
+196 silly saveTree   │ │ ├── setprototypeof@1.2.0
+196 silly saveTree   │ │ ├── statuses@2.0.1
+196 silly saveTree   │ │ └── toidentifier@1.0.1
+196 silly saveTree   │ ├─┬ iconv-lite@0.4.24
+196 silly saveTree   │ │ └── safer-buffer@2.1.2
+196 silly saveTree   │ ├─┬ on-finished@2.4.1
+196 silly saveTree   │ │ └── ee-first@1.1.1
+196 silly saveTree   │ ├─┬ qs@6.11.0
+196 silly saveTree   │ │ └─┬ side-channel@1.0.4
+196 silly saveTree   │ │   ├─┬ call-bind@1.0.2
+196 silly saveTree   │ │   │ ├── function-bind@1.1.1
+196 silly saveTree   │ │   │ └─┬ get-intrinsic@1.1.3
+196 silly saveTree   │ │   │   ├── has-symbols@1.0.3
+196 silly saveTree   │ │   │   └── has@1.0.3
+196 silly saveTree   │ │   ├── get-intrinsic@1.1.3
+196 silly saveTree   │ │   └── object-inspect@1.12.3
+196 silly saveTree   │ ├─┬ raw-body@2.5.1
+196 silly saveTree   │ │ └── unpipe@1.0.0
+196 silly saveTree   │ ├─┬ type-is@1.6.18
+196 silly saveTree   │ │ └── media-typer@0.3.0
+196 silly saveTree   │ └── unpipe@1.0.0
+196 silly saveTree   ├─┬ content-disposition@0.5.4
+196 silly saveTree   │ └── safe-buffer@5.2.1
+196 silly saveTree   ├── content-type@1.0.4
+196 silly saveTree   ├── cookie-signature@1.0.6
+196 silly saveTree   ├── cookie@0.5.0
+196 silly saveTree   ├── debug@2.6.9
+196 silly saveTree   ├── depd@2.0.0
+196 silly saveTree   ├── encodeurl@1.0.2
+196 silly saveTree   ├── escape-html@1.0.3
+196 silly saveTree   ├── etag@1.8.1
+196 silly saveTree   ├─┬ finalhandler@1.2.0
+196 silly saveTree   │ └── parseurl@1.3.3
+196 silly saveTree   ├── fresh@0.5.2
+196 silly saveTree   ├── http-errors@2.0.0
+196 silly saveTree   ├── merge-descriptors@1.0.1
+196 silly saveTree   ├── methods@1.1.2
+196 silly saveTree   ├── on-finished@2.4.1
+196 silly saveTree   ├── parseurl@1.3.3
+196 silly saveTree   ├── path-to-regexp@0.1.7
+196 silly saveTree   ├─┬ proxy-addr@2.0.7
+196 silly saveTree   │ ├── forwarded@0.2.0
+196 silly saveTree   │ └── ipaddr.js@1.9.1
+196 silly saveTree   ├── qs@6.11.0
+196 silly saveTree   ├── range-parser@1.2.1
+196 silly saveTree   ├── safe-buffer@5.2.1
+196 silly saveTree   ├─┬ send@0.18.0
+196 silly saveTree   │ ├── mime@1.6.0
+196 silly saveTree   │ └── ms@2.1.3
+196 silly saveTree   ├── serve-static@1.15.0
+196 silly saveTree   ├── setprototypeof@1.2.0
+196 silly saveTree   ├── statuses@2.0.1
+196 silly saveTree   ├── type-is@1.6.18
+196 silly saveTree   ├── utils-merge@1.0.1
+196 silly saveTree   └── vary@1.1.2
+197 warn Invalid version: "0.1"
+198 warn nodejsdocker No description
+199 warn nodejsdocker No repository field.
+200 warn nodejsdocker No README data
+201 warn nodejsdocker No license field.
+202 verbose stack Error: EACCES: permission denied, access '/home/ec2-user/nodejsdocker'
+203 verbose cwd /home/ec2-user/nodejsdocker
+204 verbose Linux 5.10.157-139.675.amzn2.x86_64
+205 verbose argv "/home/ec2-user/.nvm/versions/node/v12.22.12/bin/node" "/home/ec2-user/.nvm/versions/node/v12.22.12/bin/npm" "install" "express"
+206 verbose node v12.22.12
+207 verbose npm  v6.14.16
+208 error code EACCES
+209 error syscall access
+210 error path /home/ec2-user/nodejsdocker
+211 error errno -13
+212 error Error: EACCES: permission denied, access '/home/ec2-user/nodejsdocker'
+212 error  [Error: EACCES: permission denied, access '/home/ec2-user/nodejsdocker'] {
+212 error   errno: -13,
+212 error   code: 'EACCES',
+212 error   syscall: 'access',
+212 error   path: '/home/ec2-user/nodejsdocker'
+212 error }
+213 error The operation was rejected by your operating system.
+213 error It is likely you do not have the permissions to access this file as the current user
+213 error
+213 error If you believe this might be a permissions issue, please double-check the
+213 error permissions of the file and its containing directories, or try running
+213 error the command again as root/Administrator.
+214 verbose exit [ -13, true ]

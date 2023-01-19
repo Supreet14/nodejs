@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<!-- Page generated 2023-01-17 22:05:34 +0000-->
+<html lang="en"><head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!-- OneTrust Cookies Consent Notice start for http://docs.docker.com  -->
+<script src="https://cdn.cookielaw.org/scripttemplates/otSDKStub.js"  type="text/javascript" charset="UTF-8" data-domain-script="8e0ebfd9-035d-4ec2-9b2f-a2de9c09f906" ></script>
+<script type="text/javascript">
+  function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for http://docs.docker.com  -->
+
+<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WL2QLG5');</script>
+<title>Install on Linux | Docker Documentation</title>
+  <meta name="description" content="How to install Docker Desktop on Linux" />
+  <meta name="keywords" content="linux, desktop, docker desktop, docker desktop for linux, dd4l, install, system requirements">
+  <link rel="canonical" href="https://docs.docker.com/desktop/install/linux-install/" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/x-icon" href="/assets/favicons/docs@2x.ico" sizes="129x128">
+  <link rel="apple-touch-icon" type="image/x-icon" href="/assets/favicons/docs@2x.ico" sizes="129x128">
+  <meta name="msapplication-TileImage" content="/assets/favicons/docs@2x.ico">
+  <meta property="og:image" content="/assets/favicons/docs@2x.ico"/>
+  <meta name="theme-color" content="#2496ed" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- hide elements that are only shown without JavaScript enabled -->
+  <script>document.documentElement.classList.add('js')</script>
+  <style>html.js .no-js { display: none !important; }</style><script defer src="/assets/js/theme-switcher.js"></script>
+  <script defer src="/assets/js/anchorlinks.js"></script>
+  <script defer src="/assets/jquery/jquery.js"></script>
+  <script defer src="/assets/bootstrap/js/bootstrap.min.js"></script>
+  <script defer src="/assets/js/docs.js"></script>
+  <script defer src="/assets/js/copy.js"></script>
+  <script defer src="/assets/js/modal.js"></script><script defer src="/assets/js/search.js"></script><!-- Hotjar Tracking Code -->
+<script>
+  (function(h,o,t,j,a,r){
+    h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+    h._hjSettings={hjid:3169877,hjsv:6};
+    a=o.getElementsByTagName('head')[0];
+    r=o.createElement('script');r.async=1;
+    r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+    a.appendChild(r);
+  })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script><link rel="preload" as="font" href="https://fonts.gstatic.com/s/opensans/v18/mem8YaGs126MiZpBA-UFVZ0bf8pkAg.woff2" type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/assets/fontawesome/webfonts/fa-brands-400.woff2"        type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/assets/fontawesome/webfonts/fa-regular-400.woff2"       type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/assets/fontawesome/webfonts/fa-solid-900.woff2"         type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/assets/fontawesome/webfonts/fa-v4compatibility.woff2"   type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/assets/fonts/geomanist/hinted-Geomanist-Book.woff2"            type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/assets/fonts/geomanist/hinted-Geomanist-Regular.woff2"         type="font/woff2" crossorigin="anonymous">
+  <link rel="preload" as="font" href="/assets/bootstrap/fonts/glyphicons-halflings-regular.woff2"               type="font/woff2" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="/assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/style.css" id="pagestyle">
+
+  <!-- SEO stuff -->
+  <meta name="twitter:title" itemprop="title name" content="Install on Linux"/>
+  <meta name="twitter:description" property="og:description" itemprop="description" content="" />
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:domain" content="docs.docker.com"/>
+  <meta name="twitter:site" content="@docker_docs"/>
+  <meta name="twitter:url" content="https://twitter.com/docker_docs"/>
+  <meta name="twitter:image:src" content="https://docs.docker.com/assets/images/docs@2x.png"/>
+  <meta name="twitter:image:alt" content="Docker Documentation"/>
+  <meta property="og:title" content="Install on Linux" />
+  <meta property="og:description" content="How to install Docker Desktop on Linux" />
+  <meta property="og:type" content="website"/>
+  <meta property="og:updated_time" itemprop="dateUpdated" content="2023-01-17T22:05:34+00:00"/>
+  <meta property="og:image" itemprop="image primaryImageOfPage" content="https://docs.docker.com/assets/images/docs@2x.png"/>
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:url" content="https://docs.docker.com/desktop/install/linux-install/" />
+  <meta property="og:site_name" content="Docker Documentation" />
+  <meta property="article:published_time" itemprop="datePublished" content="2023-01-17T22:05:34+00:00"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","headline":"Install on Linux","description":"How to install Docker Desktop on Linux","url":"https://docs.docker.com/desktop/install/linux-install/"}</script>
+  <!-- END SEO STUFF -->
+</head>
+<body class="colums">
+    <header>
+        <nav class="nav-secondary navbar navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a href="/">
+                <img class="logo" src="/assets/images/docker-docs-logo.svg" alt="Docker Docs" title="Docker Docs" width="160" height="28" />
+            </a>
+        </div>
+        <div class="navbar-collapse" aria-expanded="false" style="height: 1px;">
+            <div class="logo-mobile">
+    <a href="/">
+        <img src="/assets/images/docker-icon.svg" alt="Docker Docs" title="Docker Docs" width="30" height="30" />
+    </a>
+</div>
+<div class="search-form" id="search-div">
+    <form class="search-form form-inline" id="searchForm" action="/search/" method="get">
+        <label for="st-search-input" class="sr-only">Search</label>
+        <input data-hj-allow class="search-field form-control ds-input" id="st-search-input" name="q" placeholder="Search the docs" type="search" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;">
+        <div id="autocompleteResults"></div>
+        <!-- <button type="submit" class="search-submit btn btn-default">Search</button> -->
+    </form>
+</div>
+<div class="sidebar-toggle">
+    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+    </button>
+</div>
+<div class="nav-container hidden-sm hidden-xs">
+    <div>
+        <ul class="nav navbar-nav"><li><a href="/" id="home">Home</a></li><li><a href="/get-started/overview/" id="guides">Guides</a></li><li><a href="/desktop/" id="manuals">Manuals</a></li><li><a href="/reference/" id="reference">Reference</a></li><li><a href="/samples/" id="samples">Samples</a></li><li><a href="/contribute/overview/" id="contribute">Contribute</a></li></ul>
+    </div>
+    <div class="ctrl-right">
+        <a href="javascript:void(0)" id="menu-toggle" aria-label="Current page's menu toggle"><i class="fa fa-indent" aria-hidden="true"></i></a>
+    </div>
+</div>
+<div class="row hidden-sm hidden-xs">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li><a href="/" title="Docker docs homepage"><i class="fa fa-home"></i></a></li>
+            <li><a href="/desktop/">Manuals</a></li><li><a href="/desktop/">Docker Desktop</a></li><li><a href="/desktop/install/mac-install/">Install Docker Desktop</a></li><li><a href="/desktop/install/linux-install/">Install on Linux</a></li></ol>
+    </nav>
+</div></div>
+    </div>
+</nav>
+
+    </header>
+    <div class="wrapper right-open">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-body">
+                    <main class="col-content content">
+                        <section class="section"><h1>Install on Linux</h1><p></p>
+                            <blockquote>
+  <p><strong>Docker Desktop terms</strong></p>
+
+  <p>Commercial use of Docker Desktop in larger enterprises (more than 250
+employees OR more than $10 million USD in annual revenue) requires a paid
+subscription.</p>
+</blockquote>
+
+<blockquote class="important">
+  <p>Important</p>
+
+  <p>Docker Desktop on Linux runs a Virtual Machine (VM) so creates and uses a custom docker context <code class="language-plaintext highlighter-rouge">desktop-linux</code> on startup.</p>
+
+  <p>This means images and containers deployed on the Linux Docker Engine (before installation) are not available in Docker Desktop for Linux.</p>
+
+  <p>For more information see <a href="/desktop/faqs/linuxfaqs/#what-is-the-difference-between-docker-desktop-for-linux-and-docker-engine">What is the difference between Docker Desktop for Linux and Docker Engine</a>.</p>
+</blockquote>
+
+<p>This page contains information about general system requirements, supported platforms, and instructions on how to install Docker Desktop for Linux.</p>
+
+<h2 id="system-requirements">System requirements</h2>
+
+<p>To install Docker Desktop successfully, your Linux host must meet the following general requirements:</p>
+
+<ul>
+  <li>64-bit kernel and CPU support for virtualization.</li>
+  <li>KVM virtualization support. Follow the <a href="#kvm-virtualization-support">KVM virtualization support instructions</a> to check if the KVM kernel modules are enabled and how to provide access to the kvm device.</li>
+  <li><strong>QEMU must be version 5.2 or newer</strong>. We recommend upgrading to the latest version.</li>
+  <li>systemd init system.</li>
+  <li>Gnome, KDE, or MATE Desktop environment.
+    <ul>
+      <li>For many Linux distros, the Gnome environment does not support tray icons. To add support for tray icons, you need to install a Gnome extension. For example, <a href="https://extensions.gnome.org/extension/615/appindicator-support/" target="_blank" rel="noopener" class="_">AppIndicator</a>.</li>
+    </ul>
+  </li>
+  <li>At least 4 GB of RAM.</li>
+  <li>Enable configuring ID mapping in user namespaces, see <a href="/desktop/faqs/linuxfaqs/#how-do-i-enable-file-sharing">File sharing</a>.</li>
+</ul>
+
+<p>Docker Desktop for Linux runs a Virtual Machine (VM). For more information on why, see <a href="/desktop/faqs/linuxfaqs/#why-does-docker-desktop-for-linux-run-a-vm">Why Docker Desktop for Linux runs a VM</a>.</p>
+
+<blockquote>
+  <p><strong>Note:</strong></p>
+
+  <p>Docker does not provide support for running Docker Desktop in nested virtualization scenarios. We recommend that you run Docker Desktop for Linux natively on supported distributions.</p>
+</blockquote>
+
+<h2 id="supported-platforms">Supported platforms</h2>
+
+<p>Docker provides <code class="language-plaintext highlighter-rouge">.deb</code> and <code class="language-plaintext highlighter-rouge">.rpm</code> packages from the following Linux distributions
+and architectures:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Platform</th>
+      <th style="text-align: left">x86_64 / amd64</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left"><a href="/desktop/install/ubuntu/">Ubuntu</a></td>
+      <td style="text-align: left"><a href="/desktop/install/ubuntu/"><img src="/assets/images/green-check.svg" alt="yes" class="inline" style="height: 14px; margin: 0 auto" /></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="/desktop/install/debian/">Debian</a></td>
+      <td style="text-align: left"><a href="/desktop/install/debian/"><img src="/assets/images/green-check.svg" alt="yes" class="inline" style="height: 14px; margin: 0 auto" /></a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left"><a href="/desktop/install/fedora/">Fedora</a></td>
+      <td style="text-align: left"><a href="/desktop/install/fedora/"><img src="/assets/images/green-check.svg" alt="yes" class="inline" style="height: 14px; margin: 0 auto" /></a></td>
+    </tr>
+  </tbody>
+</table>
+
+<blockquote>
+  <p><strong>Note:</strong></p>
+
+  <p>An experimental package is available for <a href="/desktop/install/archlinux/">Arch</a>-based distributions. Docker has not tested or verified the installation.</p>
+</blockquote>
+
+<p>Docker supports Docker Desktop on the current LTS release of the aforementioned distributions and the most recent version. As new versions are made available, Docker stops supporting the oldest version and supports the newest version.</p>
+
+<h3 id="kvm-virtualization-support">KVM virtualization support</h3>
+
+<p>Docker Desktop runs a VM that requires <a href="https://www.linux-kvm.org" target="_blank" rel="noopener" class="_">KVM support</a>.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">kvm</code> module should load automatically if the host has virtualization support. To load the module manually, run:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>modprobe kvm
+</code></pre></div></div>
+
+<p>Depending on the processor of the host machine, the corresponding module must be loaded:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>modprobe kvm_intel  <span class="c"># Intel processors</span>
+<span class="go">
+</span><span class="gp">$</span><span class="w"> </span>modprobe kvm_amd    <span class="c"># AMD processors</span>
+</code></pre></div></div>
+
+<p>If the above commands fail, you can view the diagnostics by running:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>kvm-ok
+</code></pre></div></div>
+
+<p>To check if the KVM modules are enabled, run:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span>lsmod | <span class="nb">grep </span>kvm
+<span class="go">kvm_amd               167936  0
+ccp                   126976  1 kvm_amd
+kvm                  1089536  1 kvm_amd
+irqbypass              16384  1 kvm
+</span></code></pre></div></div>
+
+<h4 id="set-up-kvm-device-user-permissions">Set up KVM device user permissions</h4>
+
+<p>To check ownership of <code class="language-plaintext highlighter-rouge">/dev/kvm</code>, run :</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">ls</span> <span class="nt">-al</span> /dev/kvm
+</code></pre></div></div>
+
+<p>Add your user to the kvm group in order to access the kvm device:</p>
+
+<div class="language-console highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gp">$</span><span class="w"> </span><span class="nb">sudo </span>usermod <span class="nt">-aG</span> kvm <span class="nv">$USER</span>
+</code></pre></div></div>
+
+<p>Log out and log back in so that your group membership is re-evaluated.</p>
+
+<h2 id="generic-installation-steps">Generic installation steps</h2>
+
+<blockquote class="important">
+  <p>Important</p>
+
+  <p>Make sure you meet the system requirements outlined earlier and follow the distro-specific prerequisites.</p>
+</blockquote>
+
+<ol>
+  <li>Download the correct package for your Linux distribution and install it with the corresponding package manager.
+    <ul>
+      <li><a href="/desktop/install/debian/">Install on Debian</a></li>
+      <li><a href="/desktop/install/fedora/">Install on Fedora</a></li>
+      <li><a href="/desktop/install/ubuntu/">Install on Ubuntu</a></li>
+      <li><a href="/desktop/install/archlinux/">Install on Arch</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>Open your <strong>Applications</strong> menu in Gnome/KDE Desktop and search for <strong>Docker Desktop</strong>.</p>
+
+    <p><img src="/desktop/install/images/docker-app-in-apps.png" alt="Docker app in Applications" /></p>
+  </li>
+  <li>
+    <p>Select <strong>Docker Desktop</strong> to start Docker. <br /> The Docker menu (<img src="/desktop/install/images/whale-x.svg" alt="whale menu" class="inline" />) displays the Docker Subscription Service Agreement window.</p>
+  </li>
+  <li>
+    <p>Select <strong>Accept</strong> to continue. Docker Desktop starts after you accept the terms.</p>
+
+    <blockquote class="important">
+      <p><strong>Important</strong></p>
+
+      <p>If you do not agree to the terms, the Docker Desktop application will close and  you can no longer run Docker Desktop on your machine. You can choose to accept the terms at a later date by opening Docker Desktop.</p>
+    </blockquote>
+
+    <p>For more information, see <a href="https://www.docker.com/legal/docker-subscription-service-agreement" target="_blank" rel="noopener" class="_">Docker Desktop Subscription Service Agreement</a>. We recommend that you also read the <a href="https://www.docker.com/pricing/faq" target="_blank" rel="noopener" class="_" id="dkr_docs_desktop_install_btl">FAQs</a>.</p>
+  </li>
+</ol>
+
+<h2 id="where-to-go-next">Where to go next</h2>
+
+<ul>
+  <li><a href="/desktop/troubleshoot/overview/">Troubleshooting</a> describes common problems, workarounds, how to run and submit diagnostics, and submit issues.</li>
+  <li><a href="/desktop/faqs/general/">FAQs</a> provide answers to frequently asked questions.</li>
+  <li><a href="/desktop/release-notes/">Release notes</a> lists component updates, new features, and improvements associated with Docker Desktop releases.</li>
+  <li><a href="/get-started/">Get started with Docker</a> provides a general Docker tutorial.</li>
+  <li><a href="/desktop/backup-and-restore/">Back up and restore data</a> provides instructions
+on backing up and restoring data related to Docker.</li>
+</ul>
+
+                        </section>
+                    </main>
+                    <nav class="col-nav">
+                        <div id="sidebar-nav" class="sidebar hidden-sm hidden-xs">
+                            <div id="navbar" class="nav-sidebar">
+                                <ul class="nav hidden-md hidden-lg"></ul>
+                                <ul class="nav" id="jsTOCLeftNav"></ul>
+                            </div>
+                        </div>
+                    </nav>
+                    <div class="col-toc">
+                        <div class="sidebar hidden-xs hidden-sm">
+                            <div class="toc-nav">
+                                <div class="feedback-links">
+                                    <ul>
+                                        <li><div class="toggle-mode">
+  <div class="icon">
+      <i class="fa fa-sun" aria-hidden="true"></i>
+  </div>
+  <div class="toggle-switch">
+      <label class="switch">
+          <input type="checkbox" id="switch-style">
+          <span class="slider round"></span>
+      </label>
+  </div>
+  <div class="icon">
+      <i class="fa fa-moon" aria-hidden="true"></i>
+  </div>
+</div>
+</li>
+                                    </ul>
+                                </div><div id="side-toc-title">Contents:</div>
+                                <div id="img-modal" class="modal">
+  <span class="close" id="img-modal-close">&times;</span>
+    <img src="/" alt="/" class="modal-content" id="img-modal-img">
+    <div id="img-modal-caption"></div>
+  </div>
+
+                                <div class="side-toc-title">Page details</div>
+                                <div class="metadata-items">
+                                    <ul><li title="Estimated reading time"><i class="fa fa-clock" aria-hidden="true"></i> 5 minute read</span></li><li><a href="https://github.com/docker/docs/edit/main/desktop/install/linux-install.md"><i class="fa fa-pencil" aria-hidden="true"></i> Edit this page</a></li><li><a href="https://github.com/docker/docs/issues/new?body=File: [desktop/install/linux-install.md](https://docs.docker.com/desktop/install/linux-install/)" class="nomunge"><i class="fa fa-check" aria-hidden="true"></i> Request changes</a></li></ul>
+                                </div><div class="side-toc-title">Tags</div>
+                                <div class="keywords-items"><a href="/search/?q=linux" class="nomunge"><i class="fa fa-tag" aria-hidden="true"></i> linux</a><a href="/search/?q=desktop" class="nomunge"><i class="fa fa-tag" aria-hidden="true"></i> desktop</a><a href="/search/?q=docker desktop" class="nomunge"><i class="fa fa-tag" aria-hidden="true"></i> docker desktop</a><a href="/search/?q=docker desktop for linux" class="nomunge"><i class="fa fa-tag" aria-hidden="true"></i> docker desktop for linux</a><a href="/search/?q=dd4l" class="nomunge"><i class="fa fa-tag" aria-hidden="true"></i> dd4l</a><a href="/search/?q=install" class="nomunge"><i class="fa fa-tag" aria-hidden="true"></i> install</a><a href="/search/?q=system requirements" class="nomunge"><i class="fa fa-tag" aria-hidden="true"></i> system requirements</a></div>
+                                <div class="side-toc-title">Contents</div>
+<ul id="my_toc" class="inline_toc">
+  <li><a href="#system-requirements" class="nomunge">System requirements</a></li>
+  <li><a href="#supported-platforms" class="nomunge">Supported platforms</a>
+    <ul>
+      <li><a href="#kvm-virtualization-support" class="nomunge">KVM virtualization support</a>
+        <ul>
+          <li><a href="#set-up-kvm-device-user-permissions" class="nomunge">Set up KVM device user permissions</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#generic-installation-steps" class="nomunge">Generic installation steps</a></li>
+  <li><a href="#where-to-go-next" class="nomunge">Where to go next</a></li>
+</ul>
+
+</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+          
+    <div class="container">
+        <div class="top_footer">
+            <div class="row">
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <ul class="footer_links">
+                        <li><b><a href="https://www.docker.com/products" target="_blank" rel="noopener">Product offerings</a></b></li>
+                        <li><a href="https://www.docker.com/products/personal" target="_blank" rel="noopener">Docker Personal</a></li>
+                        <li><a href="https://www.docker.com/products/pro" target="_blank" rel="noopener">Docker Pro</a></li>
+                        <li><a href="https://www.docker.com/products/team" target="_blank" rel="noopener">Docker Team</a></li>
+                        <li><a href="https://www.docker.com/products/business" target="_blank" rel="noopener">Docker Business</a></li>
+                        <li><a href="https://www.docker.com/products" target="_blank" rel="noopener">Compare Subscriptions</a></li>
+                        <li><b><a href="https://www.docker.com/" target="_blank" rel="noopener">Features</a></b></li>
+                        <li><a href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener">Docker Desktop</a></li>
+                        <li><a href="https://www.docker.com/products/docker-hub" target="_blank" rel="noopener">Docker Hub</a></li>
+                        <li><a href="https://www.docker.com/products/secure-software-supply-chain" target="_blank" rel="noopener">Secure Software Supply Chain</a></li>
+                        <li><a href="https://www.docker.com/products/container-runtime" target="_blank" rel="noopener">Container Runtime</a></li>
+                        <li><a href="https://www.docker.com/products/developer-tools" target="_blank" rel="noopener">Developer Tools</a></li>
+                        <li><a href="https://www.docker.com/partners" target="_blank" rel="noopener">Trusted Content</a></li>
+                        <li><a href="https://www.docker.com/roadmap" target="_blank" rel="noopener">Docker Product Roadmap</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <ul class="footer_links">
+                        <li><b><a href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener">Developers</a></b></li>
+                        <li><a href="https://www.docker.com/use-cases" target="_blank" rel="noopener">Use Cases</a></li>
+                        <li><a href="/get-started/" target="_blank" rel="noopener">Get Started</a></li>
+                        <li><a href="https://www.docker.com/blog/" target="_blank" rel="noopener">Blog</a></li>
+                        <li><a href="https://www.docker.com/docker-community" target="_blank" rel="noopener">Community</a></li>
+                        <li><a href="https://www.docker.com/open-source" target="_blank" rel="noopener">Open Source</a></li>
+                        <li><a href="https://www.docker.com/community/get-involved/developer-preview" target="_blank" rel="noopener">Preview Program</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <ul class="footer_links">
+                        <li><b><a href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener">Pricing</a></b></li>
+                        <li><a href="https://www.docker.com/pricing/faq" target="_blank" rel="noopener">FAQ</a></li>
+                        <li><a href="https://www.docker.com/partners/programs" target="_blank" rel="noopener">Docker Verified Publisher</a></li>
+                        <li><a href="https://www.docker.com/partners" target="_blank" rel="noopener">Partners</a></li>
+                    </ul>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-3">
+                    <ul class="footer_links">
+                        <li><b><a href="https://www.docker.com/company" target="_blank" rel="noopener">About Us</a></b></li>
+                        <li><a href="https://www.docker.com/what-container" target="_blank" rel="noopener">What is a Container?</a></li>
+                        <li><a href="https://www.docker.com/why-docker" target="_blank" rel="noopener">Why Docker?</a></li>
+                        <li><a href="https://www.docker.com/events" target="_blank" rel="noopener">Virtual Events</a></li>
+                        <li><a href="https://www.docker.com/swag" target="_blank" rel="noopener">Swag Store
+                        </a></li>
+                        <li><a href="https://www.docker.com/company/newsroom" target="_blank" rel="noopener">Newsroom</a></li>
+                        <li><a href="https://www.docker.com/careers" target="_blank" rel="noopener">Careers</a></li>
+                        <li><a href="https://www.docker.com/company/contact" target="_blank" rel="noopener">Contact Us</a></li>
+                        <li><a href="https://www.docker.com/customers" target="_blank" rel="noopener">Customers</a></li>
+                        <li><a href="https://www.docker.com/newsletter-subscription" target="_blank" rel="noopener">Newsletter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-nav">
+                <nav class="footer_sub_nav">
+                    <ul class="menu">
+                        <li><a href="https://www.docker.com/legal/docker-terms-service" target="_blank" rel="noopener">Terms of Service</a></li>
+                        <li><a href="https://status.docker.com/" target="_blank" rel="noopener">Status</a></li>
+                        <li><a href="https://www.docker.com/legal" target="_blank" rel="noopener">Legal</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="bottom_footer">
+            <div class="footer-copyright col-xs-12 col-md-8">
+                <p class="copyright">
+                    Copyright &copy; 2013-2023 Docker Inc. All rights reserved.
+                </p><!-- OneTrust Cookies Settings button start -->
+                <button id="ot-sdk-btn" class="ot-sdk-show-settings">Cookie Settings</button>
+                <!-- OneTrust Cookies Settings button end --></div>
+            <div class="footer_social_nav">
+                <ul class="nav-social">
+                    <li class="fa-brands fa-twitter"><a href="https://twitter.com/docker">Twitter</a></li>
+                    <li class="fa-brands fa-youtube"><a href="https://www.youtube.com/user/dockerrun">Youtube</a></li>
+                    <li class="fa-brands fa-github"><a href="https://github.com/docker">GitHub</a></li>
+                    <li class="fa-brands fa-linkedin-in"><a href="https://www.linkedin.com/company/docker">Linkedin</a></li>
+                    <li class="fa-brands fa-facebook-f"><a href="https://www.facebook.com/docker.run">Facebook</a></li>
+                    <li class="fa-brands fa-slideshare"><a href="https://www.slideshare.net/docker">Slideshare</a></li>
+                    <li class="fa-brands fa-reddit-alien"><a href="https://www.reddit.com/r/docker">Reddit</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </footer>
+    <script>const pageURL = "/desktop/install/linux-install/";</script>
+</body>
+</html>
