@@ -1,6 +1,7 @@
 pipeline {
     agent {
         docker { image 'nodejsapp:1' }
+        docker.withRegistry('', 'dockerHub')
     }
     stages {
         stage('Test') {
