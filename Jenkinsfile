@@ -1,5 +1,6 @@
 pipeline {
-    agent {
+    agent none
+    {
         docker { image 'nodejsapp:1' }
         docker.withRegistry('', 'dockerHub')
     }
