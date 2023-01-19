@@ -18,7 +18,7 @@ stages {
                 }
             }
             }
-           // sh 'npm test'
+           sh 'node --version'
         }
     }
     stage('Deploy') {
