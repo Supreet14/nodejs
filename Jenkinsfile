@@ -1,28 +1,15 @@
-pipeline {
-  agent any
-  environment {
-    DOCKERHUB_CREDENTIALS = credentials('dockerHub')
-  }
-  stages {
-    stage('Build') {
-      steps {
-        sh 'docker build -t supreet14/nodejsapp:1 .'
-      }
+node {   
+    stage('Clone repository') {
+        git credentialsId: 'git', url: ''
     }
-    stage('Login') {
-      steps {
-        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
-      }
+    
+    stage('Build image') {
+       dockerImage = docker.build("supreet14/reactjsapp:1")
     }
-    stage('Push') {
-      steps {
-        sh 'docker push supreet14/nodejsapp:1'
-      }
-    }
-  }
-  post {
-    always {
-      sh 'docker logout'
-    }
-  }
+    
+ /*stage('Push image') {
+        withDockerRegistry([ credentialsId: "dockerhubaccount", url: "" ]) {
+        dockerImage.push()
+        }
+    }    */
 }
