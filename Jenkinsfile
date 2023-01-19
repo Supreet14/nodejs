@@ -14,7 +14,7 @@ stages {
             script {
                 script {
                 docker.withRegistry('','dockerHub') {
-                    docker.image('selenium/standalone-firefox:3.141.59-gold')
+                    docker.image('nodejs:1')
                 }
             }
             }
