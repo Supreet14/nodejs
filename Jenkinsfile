@@ -14,11 +14,10 @@ stages {
             script {
                 script {
                 docker.withRegistry('','dockerHub') {
-                    docker.image('supreet14/nodejsapp:1')
+                    sh 'docker build -t supreet14/nodejsapp:1 .'
                 }
             }
             }
-           sh 'node --version'
         }
     }
     stage('Deploy') {
