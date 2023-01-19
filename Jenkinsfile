@@ -1,15 +1,30 @@
-node {   
-    stage('Clone repository') {
-        git credentialsId: 'git', url: 'https://github.com/Supreet14/nodejs.git'
-    }
-    
-    stage('Build image') {
-       dockerImage = docker.build("supreet14/reactjsapp:1")
-    }
-    
- /*stage('Push image') {
-        withDockerRegistry([ credentialsId: "dockerhubaccount", url: "" ]) {
-        dockerImage.push()
+pipeline {
+agent any
+
+stages {
+    stage('Build') {
+        steps {
+            echo 'Building..'
+            //sh 'npm install'
         }
-    }    */
+    }
+    stage('Test') {
+        steps {
+            echo 'Testing..'
+            script {
+                script {
+                docker.withRegistry('','dockerHub') {
+                    docker.image('supreet14/nodejsapp:1')
+                }
+            }
+            }
+           // sh 'npm test'
+        }
+    }
+    stage('Deploy') {
+        steps {
+            echo 'Deploying....'
+        }
+    }
+ }
 }
