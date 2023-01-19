@@ -1,6 +1,6 @@
 node {   
     stage('Clone repository') {
-        git credentialsId: 'git', url: ''
+        git credentialsId: 'git', url: 'https://github.com/Supreet14/nodejs.git'
     }
     
     stage('Build image') {
