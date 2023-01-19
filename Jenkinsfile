@@ -1,15 +1,12 @@
 pipeline {
-  agent { label 'linux' }
-  options {
-    buildDiscarder(logRotator(numToKeepStr: '5'))
-  }
+  agent any
   environment {
-    DOCKERHUB_CREDENTIALS = credentials('darinpope-dockerhub')
+    DOCKERHUB_CREDENTIALS = credentials('dockerHub')
   }
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t darinpope/dp-alpine:latest .'
+        sh 'docker build -t supreet14/nodejsapp:2 .'
       }
     }
     stage('Login') {
@@ -19,7 +16,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push darinpope/dp-alpine:latest'
+        sh 'docker push supreet14/nodejsapp:2'
       }
     }
   }
