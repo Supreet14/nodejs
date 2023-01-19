@@ -1,30 +1,31 @@
 pipeline {
-agent any
-
-stages {
+  agent { label 'linux' }
+  options {
+    buildDiscarder(logRotator(numToKeepStr: '5'))
+  }
+  environment {
+    DOCKERHUB_CREDENTIALS = credentials('dockerHub')
+  }
+  stages {
     stage('Build') {
-        steps {
-            echo 'Building..'
-            //sh 'npm install'
-        }
+      steps {
+        sh 'docker build -t supreet14/nodejsapp:1 .'
+      }
     }
-    stage('Test') {
-        steps {
-            echo 'Testing..'
-            script {
-                script {
-                docker.withRegistry('','dockerHub') {
-                    docker.image('nodejs:1')
-                }
-            }
-            }
-           // sh 'npm test'
-        }
+    stage('Login') {
+      steps {
+        sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+      }
     }
-    stage('Deploy') {
-        steps {
-            echo 'Deploying....'
-        }
+    stage('Push') {
+      steps {
+        sh 'docker push supreet14/nodejsapp:1'
+      }
     }
- }
+  }
+  post {
+    always {
+      sh 'docker logout'
+    }
+  }
 }
