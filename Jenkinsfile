@@ -1,10 +1,12 @@
-pipeline {  
-    agent any  
-    stages {  
-            stage ('Build') {  
-                steps {  
-                        echo 'Running build phase...'  
-                }  
-            }  
-    }  
-}  
+pipeline {
+    agent {
+        docker { image 'nodejsapp:1' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
