@@ -25,7 +25,7 @@ pipeline {
       steps {
         sh 'echo "ssh private key at $SSH_CREDS"'
         sh 'echo "ssh user is $SSH_CREDS_USR"'
-      // sh """ 
+       sh """ 
       //#!/bin/bash
        ssh -i ec2-user@43.207.48.0 && docker --version"""
       }
