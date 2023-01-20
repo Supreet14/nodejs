@@ -27,7 +27,7 @@ pipeline {
         sh 'echo "ssh user is $SSH_CREDS_USR"'
       // sh """ 
       //#!/bin/bash
-       //ssh -i ec2-user@43.207.48.0 && docker --version"""
+       ssh -i ec2-user@43.207.48.0 && docker --version"""
       }
     }
   }
