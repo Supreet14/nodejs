@@ -2,7 +2,7 @@ pipeline {
   agent any
   environment {
     DOCKERHUB_CREDENTIALS = credentials('dockerHub')
-    EC2_CREDENTIALS = creadentials('3.207.48.0')
+    EC2_CREDENTIALS = credentials('43.207.48.0')
   }
   stages {
     /*stage('Build') {
