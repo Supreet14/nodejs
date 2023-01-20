@@ -22,7 +22,7 @@ pipeline {
   }*/
   stage('EC2') {
       steps {
-       sh """ ssh ubuntu@${input.alInfo.deploymentServerIp} docker --version"""
+       sh """ ssh ec2-user@43.207.48.0 && docker --version"""
       }
     }
   }
