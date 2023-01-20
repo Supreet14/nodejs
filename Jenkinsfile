@@ -24,7 +24,7 @@ pipeline {
   stage('EC2') {
       steps {
        sh """ 
-       !/bin/bash
+       #!/bin/bash
        ssh -tt ec2-user@43.207.48.0 && docker --version"""
       }
     }
