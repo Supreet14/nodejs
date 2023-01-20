@@ -25,10 +25,11 @@ pipeline {
        sh """ ssh ubuntu@${input.alInfo.deploymentServerIp} docker --version"""
       }
     }
+  }
   post {
     always {
       sh 'docker logout'
     }
   }
 }
-}
+
