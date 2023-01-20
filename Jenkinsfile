@@ -22,11 +22,9 @@ pipeline {
     }
   }*/
   stage('EC2') {
-      steps {
-        sh 'echo "ssh private key at $SSH_CREDS"'
-        sh 'echo "ssh user is $SSH_CREDS_USR"'
+    steps {
        sh """ 
-      //#!/bin/bash
+        #!/bin/bash
        ssh -i ec2-user@43.207.48.0 && docker --version"""
       }
     }
