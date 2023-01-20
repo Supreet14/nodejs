@@ -2,6 +2,7 @@ pipeline {
   agent any
   environment {
     DOCKERHUB_CREDENTIALS = credentials('dockerHub')
+    EC2_CREDENTIALS = creadentials('3.207.48.0')
   }
   stages {
     /*stage('Build') {
@@ -22,7 +23,7 @@ pipeline {
   }*/
   stage('EC2') {
       steps {
-       sh """ ssh -tt ec2-user@43.207.48.0 && docker --version"""
+       sh """ ssh -tt  $EC2_CREDENTIALS ec2-user@43.207.48.0 && docker --version"""
       }
     }
   }
