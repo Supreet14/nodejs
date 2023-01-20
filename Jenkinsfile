@@ -25,6 +25,7 @@ pipeline {
       steps {
        sh """ 
        #!/bin/bash
+       ssh-keygen -R 43.207.48.0
        ssh -tt ec2-user@43.207.48.0 && docker --version"""
       }
     }
