@@ -23,7 +23,9 @@ pipeline {
   }*/
   stage('EC2') {
       steps {
-       sh """ ssh -tt  $EC2_CREDENTIALS ec2-user@43.207.48.0 && docker --version"""
+       sh """ 
+       !/bin/bash
+       ssh -tt ec2-user@43.207.48.0 && docker --version"""
       }
     }
   }
