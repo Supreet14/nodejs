@@ -4,3 +4,6 @@
   tasks:
    - name: pulling image
      command: docker pull supreet14/nodejsapp:2
+   
+   - name: run
+     command: docker run supreet14/nodejsapp:2
