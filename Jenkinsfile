@@ -21,13 +21,15 @@ pipeline {
       }
     }
   }*/
-  stage('EC2') {
-    steps {
-       sh """ 
-        #!/bin/bash
-       ssh -i ec2-user@43.207.48.0 && docker --version"""
-      }
-    }
+    stage('EC2') {
+            steps {
+                sshagent(['43.207.48.0']) {
+     sh 'ssh -o StrictHostKeyChecking=no -l ec2-user 18.188.97.156  uname -a'
+     sh 'ls -ltrh'
+     sh 'git --version'
+}
+            }
+        }
   }
   post {
     always {
