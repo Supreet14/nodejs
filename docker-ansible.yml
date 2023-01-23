@@ -6,4 +6,4 @@
      command: docker pull supreet14/nodejsapp:2
    
    - name: run
-     command: docker run supreet14/nodejsapp:2
+     command: docker run -p 3000:3000 supreet14/nodejsapp:2
