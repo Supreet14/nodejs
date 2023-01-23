@@ -8,7 +8,7 @@ pipeline {
       steps {
         sh 'docker build -t supreet14/nodejsapp:2 .'
       }
-    }
+    }*/
     stage('Login') {
       steps {
         sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
@@ -32,9 +32,10 @@ pipeline {
       }
     }
   }
-  /*post {
+  post {
     always {
       sh 'docker logout'
-    }*/
+    }
+}
 }
 
