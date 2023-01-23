@@ -23,7 +23,7 @@ pipeline {
    stage('Ansible')
     {
       steps{
-          sh'ansiblePlaybook credentialsId: '43.207.48.0', disableHostKeyChecking: true, installation: 'ansible', inventory: 'testserver.inv', playbook: 'docker-ansible.yml''
+          ansiblePlaybook credentialsId: '43.207.48.0', disableHostKeyChecking: true, installation: 'ansible', inventory: 'testserver.inv', playbook: 'docker-ansible.yml'
           //sh"""ssh -o StrictHostKeyChecking=yes -l ec2-user 54.250.107.129 uname -a  
                //docker images"""
           //sh'docker --version'
