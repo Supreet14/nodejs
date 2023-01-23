@@ -1,0 +1,8 @@
+---- 
+- hosts: all
+  become: true  
+
+  tasks:    
+  - name: pulling image
+    command: docker pull supreet14/nodejsapp:2
+  
