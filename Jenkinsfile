@@ -29,7 +29,7 @@ pipeline {
           sh'docker --version'
           //sh'sudo service docker start'
           sh'docker pull supreet14/nodejsapp:2'
-          sh'docker run nodejsapp:2'
+          sh'docker run supreet14/nodejsapp:2'
         }
       }
     }
