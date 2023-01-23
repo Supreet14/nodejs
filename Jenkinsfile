@@ -27,6 +27,7 @@ pipeline {
         {
           sh'ssh -o StrictHostKeyChecking=no -l ec2-user 54.250.107.129 uname -a'
           sh'docker --version'
+          sh'docker pull supreet14/nodejsapp:2'
         }
       }
     }
