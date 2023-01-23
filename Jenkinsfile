@@ -25,7 +25,7 @@ pipeline {
       steps{
         sshagent(['43.207.48.0'])
         {
-          sh"""ssh -o StrictHostKeyChecking=no -l ec2-user 54.250.107.129 uname -a  
+          sh"""ssh -o StrictHostKeyChecking=yes -l ec2-user 54.250.107.129 uname -a  
                docker images"""
           //sh'docker --version'
           //sh'sudo service docker start'
