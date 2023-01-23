@@ -3,7 +3,7 @@
   become: True
   tasks:
    - name: pulling image
-     command: docker pull supreet14/nodejsapp:2
+     command: docker pull supreet14/nodejsapp:3
    
    - name: run
-     command: docker run -p 3000:3000 supreet14/nodejsapp:2
+     command: docker run -p 3000:3000 supreet14/nodejsapp:3
